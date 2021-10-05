@@ -7,7 +7,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/ionic-project';
 } else {
-    urlDB = 'mongodb+srv://RASE:nG51gvwWA9AJ9haj@ionicapp.depxx.mongodb.net/test';
+    urlDB = process.env.MONGO_URI;
 }
 
 process.env.URLDB = urlDB;
